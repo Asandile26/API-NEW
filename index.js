@@ -4,7 +4,7 @@ const route = require('./controller');
 // cors
 const cors = require('cors');
 // port 
-const port = parseInt(process.env.PORT) || 3306;
+const port = parseInt(process.env.PORT) || 2010;
 // Express app
 const app = express();
 // Middleware
@@ -17,7 +17,7 @@ bodyParser.urlencoded( {extended: true} ): Object will contain
 values of any type instead of just a string
 */
 app.use((req, res, next)=> {
-        res.header('Access-Control-Allow-Origin', 'http://localhost:2010')
+        res.header('Access-Control-Allow-Origin', 'http://localhost:8080')
         res.header("Access-Control-Allow-Credentials", "true")
         res.header("Access-Control-Allow-Methods", "*")
         res.header("Access-Control-Allow-Headers", "*")

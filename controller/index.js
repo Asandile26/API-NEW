@@ -1,4 +1,3 @@
-
 const express = require('express');
 // path
 const path = require('path');
@@ -32,7 +31,7 @@ route.put('/user/:id',bodyParser.json(), (req, res)=>{
 // Register
 route.post('/register', bodyParser.json(), (req, res)=> {
     user.createUser(req, res);
-})
+});
 // Delete
 route.delete('/user/:id', (req, res)=>{
     user.deleteUser(req, res);
